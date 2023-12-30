@@ -86,3 +86,22 @@
 .hidden {
   display: none;
 }
+
+/* Add new styles for the clickable headings */
+.clockface-heading,
+.app-heading {
+    cursor: pointer;
+    color: #3498db; /* Change the color as desired */
+    text-decoration: underline;
+    margin: 0;
+    padding: 0;
+}
+
+/* Additional styles for the divs under isolayer */
+.clockface {
+    /* Add your styles for clockface here */
+}
+
+.app {
+    /* Add your styles for app here */
+}

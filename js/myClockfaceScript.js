@@ -52,6 +52,24 @@ function clickMenu() {
 
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+        // Click event for clockface heading
+        document.querySelector('.clockface-heading').addEventListener('click', function () {
+            toggleDivVisibility('.isolayer .clockface');
+        });
+
+        // Click event for app heading
+        document.querySelector('.app-heading').addEventListener('click', function () {
+            toggleDivVisibility('.isolayer .app');
+        });
+
+        function toggleDivVisibility(selector) {
+            var divs = document.querySelectorAll(selector);
+            for (var i = 0; i < divs.length; i++) {
+                divs[i].style.display = (divs[i].style.display === 'none' || divs[i].style.display === '') ? 'block' : 'none';
+            }
+        }
+    });
 //todo horizontal
 
 // https://codepen.io/imprfcto/pen/WNNpBLp

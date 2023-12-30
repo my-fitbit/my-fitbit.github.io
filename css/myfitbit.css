@@ -87,6 +87,16 @@ margin-left: 0;
 display: none;
 }
 
+.codrops-header {
+  position: relative;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
 /* Add new styles for the clickable headings */
 .clockface-heading,
 .app-heading {
@@ -94,7 +104,6 @@ display: none;
   top: 0; /* Adjust as needed */
   left: 50%; /* Center the headings horizontally */
   transform: translateX(-50%); /* Center the headings horizontally */
-  background-color: white; /* Adjust the background color */
   padding: 10px; /* Adjust the padding */
   z-index: 1000; /* Ensure the headings appear above other elements */
 

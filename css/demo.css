@@ -303,7 +303,14 @@ a:hover, a:focus {
     margin: 0 auto; /* Center it horizontally */
 }
 
-@media (min-width: 767px) {
+/* Additional CSS specific to the .pater element */
+.pater-reset {
+	body, html {
+		margin: 0;
+		padding: 0;
+	}
+}
+@media (max-width: 767px) {
 	/* Apply styles only for devices with a screen width of 767px or smaller */
 	.pater {
 		position: fixed;
@@ -311,6 +318,11 @@ a:hover, a:focus {
 		right: 0;
 		margin: 10px; /* Adjust margin as needed */
 	}
+	/* Additional CSS to override conflicting styles */
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .demo-2 .pater {

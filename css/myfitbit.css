@@ -103,10 +103,10 @@ h1 {
   position: fixed;
   top: 0; /* Adjust as needed */
   left: 50%; /* Center the headings horizontally */
+  padding: 5px; /* Adjust padding as needed */
+  margin-bottom: 5px; /* Add margin between the headings */
   transform: translateX(-50%); /* Center the headings horizontally */
-  padding: 10px; /* Adjust the padding */
   z-index: 1000; /* Ensure the headings appear above other elements */
-
   cursor: pointer;
   /* color: #3498db;*/ /* Change the color as desired */
  /* text-decoration: underline;
@@ -116,13 +116,4 @@ h1 {
 
 .app-heading {
   top: 40px; /* Adjust the distance from the top */
-}
-
-/* Additional styles for the divs under isolayer */
-.clockface {
-  /* Add your styles for clockface here */
-}
-
-.app {
-  /* Add your styles for app here */
 }

@@ -37,13 +37,13 @@
             <h1>my fitbit</h1>
             <br>
             <!-- <p>Clockface ⌚ apps 👟 <p> -->
-            <p class="clockface-heading">Clockface ⌚ </p>
-            <p class="app-heading">apps 👟 </p>
                     <!-- <nav class="codrops-demos">
                         <a class="codrops-icon codrops-icon--prev" href="index2.html" title="Go to static view"><span>Go to static view</span></a>
                         <a href="index2.html">Static view </a>
                     </nav> -->
         </header>
+        <p class="clockface-heading">Clockface ⌚ </p>
+        <p class="app-heading">apps 👟 </p>
 <!-- menu option -->
         <!-- <ul onclick="clickMenu()" class="menu">
             <div class="btn" data-open="close">
@@ -271,23 +271,23 @@
     })();
 
     document.addEventListener('DOMContentLoaded', function () {
-        // Click event for clockface heading
-        document.querySelector('.clockface-heading').addEventListener('click', function () {
-            toggleDivVisibility('.isolayer .clockface');
-        });
+            // Click event for clockface heading
+            document.querySelector('.clockface-heading').addEventListener('click', function () {
+                toggleDivVisibility('.isolayer .clockface');
+            });
 
-        // Click event for app heading
-        document.querySelector('.app-heading').addEventListener('click', function () {
-            toggleDivVisibility('.isolayer .app');
-        });
+            // Click event for app heading
+            document.querySelector('.app-heading').addEventListener('click', function () {
+                toggleDivVisibility('.isolayer .app');
+            });
 
-        function toggleDivVisibility(selector) {
-            var divs = document.querySelectorAll(selector);
-            for (var i = 0; i < divs.length; i++) {
-                divs[i].style.display = (divs[i].style.display === 'none' || divs[i].style.display === '') ? 'block' : 'none';
+            function toggleDivVisibility(selector) {
+                var divs = document.querySelectorAll(selector);
+                for (var i = 0; i < divs.length; i++) {
+                    divs[i].style.display = (divs[i].style.display === 'none' || divs[i].style.display === '') ? 'block' : 'none';
+                }
             }
-        }
-    });
+        });
     </script>
 </body>
 

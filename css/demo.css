@@ -303,7 +303,7 @@ a:hover, a:focus {
     margin: 0 auto; /* Center it horizontally */
 }
 
-@media (max-width: 767px) {
+@media (min-width: 767px) {
 	/* Apply styles only for devices with a screen width of 767px or smaller */
 	.pater {
 		position: fixed;

@@ -90,11 +90,23 @@ display: none;
 /* Add new styles for the clickable headings */
 .clockface-heading,
 .app-heading {
+  position: fixed;
+  top: 0; /* Adjust as needed */
+  left: 50%; /* Center the headings horizontally */
+  transform: translateX(-50%); /* Center the headings horizontally */
+  background-color: white; /* Adjust the background color */
+  padding: 10px; /* Adjust the padding */
+  z-index: 1000; /* Ensure the headings appear above other elements */
+
   cursor: pointer;
-  color: #3498db; /* Change the color as desired */
-  text-decoration: underline;
+  /* color: #3498db;*/ /* Change the color as desired */
+ /* text-decoration: underline;
   margin: 0;
-  padding: 0;
+  padding: 0; */
+}
+
+.app-heading {
+  top: 40px; /* Adjust the distance from the top */
 }
 
 /* Additional styles for the divs under isolayer */

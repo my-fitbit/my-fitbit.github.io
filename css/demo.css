@@ -298,6 +298,9 @@ a:hover, a:focus {
 	width: 320px;
 	padding: 2em 2em 2em 0;
 	text-align: right;
+	max-width: 100%; /* Ensure it doesn't exceed the width of its container */
+    display: block; /* Make it a block-level element */
+    margin: 0 auto; /* Center it horizontally */
 }
 
 .demo-2 .pater {

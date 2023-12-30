@@ -271,23 +271,57 @@
     })();
 
     document.addEventListener('DOMContentLoaded', function () {
-            // Click event for clockface heading
-            document.querySelector('.clockface-heading').addEventListener('click', function () {
-                toggleDivVisibility('.isolayer .app');
-            });
+        const clockfaceHeading = document.querySelector('.clockface-heading');
+        const appHeading = document.querySelector('.app-heading');
+        const clockfaceTiles = document.querySelectorAll('.isolayer .clockface');
+        const appTiles = document.querySelectorAll('.isolayer .app');
+        const tilesContainer = document.querySelector('.isolayer');
 
-            // Click event for app heading
-            document.querySelector('.app-heading').addEventListener('click', function () {
-                toggleDivVisibility('.isolayer .clockface');
-            });
+        let isToggled = false;
 
-            function toggleDivVisibility(selector) {
-                var divs = document.querySelectorAll(selector);
-                for (var i = 0; i < divs.length; i++) {
-                    divs[i].style.display = (divs[i].style.display === 'none' || divs[i].style.display === '') ? 'block' : 'none';
-                }
-            }
+        clockfaceHeading.addEventListener('click', function () {
+            toggleDivVisibility('.isolayer .app');
+            adjustTilesPosition();
         });
+
+        appHeading.addEventListener('click', function () {
+            toggleDivVisibility('.isolayer .clockface');
+            adjustTilesPosition();
+        });
+
+        function toggleDivVisibility(selector) {
+            const divs = document.querySelectorAll(selector);
+            for (const div of divs) {
+                div.style.display = (div.style.display === 'none' || div.style.display === '') ? 'block' : 'none';
+            }
+        }
+
+        function adjustTilesPosition() {
+            isToggled = !isToggled;
+            const offset = isToggled ? -100 : 0; // Adjust the offset as needed
+
+            tilesContainer.style.transform = `translateY(${offset}%)`;
+        }
+    });
+
+    // document.addEventListener('DOMContentLoaded', function () {
+    //         // Click event for clockface heading
+    //         document.querySelector('.clockface-heading').addEventListener('click', function () {
+    //             toggleDivVisibility('.isolayer .app');
+    //         });
+
+    //         // Click event for app heading
+    //         document.querySelector('.app-heading').addEventListener('click', function () {
+    //             toggleDivVisibility('.isolayer .clockface');
+    //         });
+
+    //         function toggleDivVisibility(selector) {
+    //             var divs = document.querySelectorAll(selector);
+    //             for (var i = 0; i < divs.length; i++) {
+    //                 divs[i].style.display = (divs[i].style.display === 'none' || divs[i].style.display === '') ? 'block' : 'none';
+    //             }
+    //         }
+    //     });
     </script>
 </body>
 
